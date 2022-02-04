@@ -15,7 +15,7 @@ const Page = () => {
           raw: data,
           start: `${new Date(data.start).toDateString()} | ${new Date(data.start).toLocaleTimeString()}`,
           end: `${new Date(data.end).toDateString()} | ${new Date(data.end).toLocaleTimeString()}`,
-          diff: formatDistance(new Date(data.start), new Date(data.end))
+          diff: formatDistance(new Date(data.start), new Date(data.end), { includeSeconds: true })
         });
       } catch (error) {
         console.log(error);
