@@ -11,11 +11,17 @@ const Page = () => {
         const response = await fetch('/static/report.json');
         const data = await response.json();
 
+        const start = new Date(data.start);
+        const end = new Date(data.end);
+
+        console.log(typeof start);
+        console.log(end);
+
         setReport({
           raw: data,
-          start: `${new Date(data.start).toDateString()} | ${new Date(data.start).toLocaleTimeString()}`,
-          end: `${new Date(data.end).toDateString()} | ${new Date(data.end).toLocaleTimeString()}`,
-          diff: formatDistance(new Date(data.start), new Date(data.end), { includeSeconds: true })
+          start: `${start.toDateString()} | ${start.toLocaleTimeString()}`,
+          end: `${end.toDateString()} | ${end.toLocaleTimeString()}`,
+          diff: formatDistance(start, end)
         });
       } catch (error) {
         console.log(error);
