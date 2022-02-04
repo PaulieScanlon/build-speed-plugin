@@ -1,0 +1,30 @@
+{
+  "name": "build-speed-plugin",
+  "version": "1.0.0",
+  "description": "A prototype of the build speed plugin",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulieScanlon/build-speed-plugin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulieScanlon/build-speed-plugin/issues"
+  },
+  "homepage": "https://github.com/PaulieScanlon/build-speed-plugin#readme",
+  "dependencies": {
+    "date-fns": "^2.28.0",
+    "gatsby": "^4.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
